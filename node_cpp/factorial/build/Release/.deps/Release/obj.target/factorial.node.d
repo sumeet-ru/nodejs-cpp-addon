@@ -1,0 +1,1 @@
+cmd_Release/obj.target/factorial.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=factorial.node -o Release/obj.target/factorial.node -Wl,--start-group Release/obj.target/factorial/factorial.o -Wl,--end-group 
