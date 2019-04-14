@@ -1,1 +1,0 @@
-cmd_Release/obj.target/sum_perfomance.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=sum_perfomance.node -o Release/obj.target/sum_perfomance.node -Wl,--start-group Release/obj.target/sum_perfomance/sum_perfomance.o -Wl,--end-group 

@@ -1,0 +1,1 @@
+cmd_Release/obj.target/loop_addon.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=loop_addon.node -o Release/obj.target/loop_addon.node -Wl,--start-group Release/obj.target/loop_addon/loop_addon.o -Wl,--end-group 
