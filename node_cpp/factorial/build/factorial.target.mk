@@ -35,10 +35,13 @@ CFLAGS_CC_Debug := \
 	-std=gnu++0x
 
 INCS_Debug := \
-	-I/home/sumeet/.node-gyp/8.9.1/include/node \
-	-I/home/sumeet/.node-gyp/8.9.1/src \
-	-I/home/sumeet/.node-gyp/8.9.1/deps/uv/include \
-	-I/home/sumeet/.node-gyp/8.9.1/deps/v8/include
+	-I/home/sumeet/.node-gyp/8.9.4/include/node \
+	-I/home/sumeet/.node-gyp/8.9.4/src \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/openssl/config \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/openssl/openssl/include \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/uv/include \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/zlib \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/v8/include
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=factorial' \
@@ -70,10 +73,13 @@ CFLAGS_CC_Release := \
 	-std=gnu++0x
 
 INCS_Release := \
-	-I/home/sumeet/.node-gyp/8.9.1/include/node \
-	-I/home/sumeet/.node-gyp/8.9.1/src \
-	-I/home/sumeet/.node-gyp/8.9.1/deps/uv/include \
-	-I/home/sumeet/.node-gyp/8.9.1/deps/v8/include
+	-I/home/sumeet/.node-gyp/8.9.4/include/node \
+	-I/home/sumeet/.node-gyp/8.9.4/src \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/openssl/config \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/openssl/openssl/include \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/uv/include \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/zlib \
+	-I/home/sumeet/.node-gyp/8.9.4/deps/v8/include
 
 OBJS := \
 	$(obj).target/$(TARGET)/factorial.o

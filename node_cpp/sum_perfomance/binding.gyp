@@ -1,8 +1,8 @@
 {
   "targets": [
     {
-      "target_name": "sum_perfomance",
-      "sources": [ "sum_perfomance.cc" ]
+      "target_name": "loop_addon",
+      "sources": ["loop_addon.cc"]
     }
   ]
 }

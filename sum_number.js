@@ -1,5 +1,3 @@
-// var factorial = require('./node_cpp/factorial/build/Release/factorial.node');
-
 var sumnumber = require('./node_cpp/sum_perfomance/build/Release/sum_perfomance.node');
 
 function countSum(longValue){

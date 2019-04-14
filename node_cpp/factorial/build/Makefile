@@ -143,7 +143,7 @@ cmd_alink_thin = rm -f $@ && $(AR.$(TOOLSET)) crsT $@ $(filter %.o,$^)
 # special "figure out circular dependencies" flags around the entire
 # input list during linking.
 quiet_cmd_link = LINK($(TOOLSET)) $@
-cmd_link = $(LINK.$(TOOLSET)) $(GYP_LDFLAGS) $(LDFLAGS.$(TOOLSET)) -o $@ -Wl,--start-group $(LD_INPUTS) -Wl,--end-group $(LIBS)
+cmd_link = $(LINK.$(TOOLSET)) $(GYP_LDFLAGS) $(LDFLAGS.$(TOOLSET)) -o $@ -Wl,--start-group $(LD_INPUTS) $(LIBS) -Wl,--end-group
 
 # We support two kinds of shared objects (.so):
 # 1) shared_library, which is just bundling together many dependent libraries
@@ -308,8 +308,8 @@ ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
-cmd_regen_makefile = cd $(srcdir); /home/sumeet/App/nodeJs/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "--toplevel-dir=." "-I/media/sumeet/5a6990d0-f81c-440b-82fc-e544faac12ef/NodeJS/Node with C++/node_cpp/factorial/build/config.gypi" -I/home/sumeet/App/nodeJs/lib/node_modules/node-gyp/addon.gypi -I/home/sumeet/.node-gyp/8.9.1/include/node/common.gypi "--depth=." "-Goutput_dir=." "--generator-output=build" "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/sumeet/.node-gyp/8.9.1" "-Dnode_gyp_dir=/home/sumeet/App/nodeJs/lib/node_modules/node-gyp" "-Dnode_lib_file=/home/sumeet/.node-gyp/8.9.1/<(target_arch)/node.lib" "-Dmodule_root_dir=/media/sumeet/5a6990d0-f81c-440b-82fc-e544faac12ef/NodeJS/Node with C++/node_cpp/factorial" "-Dnode_engine=v8" binding.gyp
-Makefile: $(srcdir)/../../../../../../../home/sumeet/.node-gyp/8.9.1/include/node/common.gypi $(srcdir)/../../../../../../../home/sumeet/App/nodeJs/lib/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp
+cmd_regen_makefile = cd $(srcdir); /home/sumeet/Apps/nodeJs/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "--toplevel-dir=." "-I/media/sumeet/0E9A0C670E9A0C67/Projects/Node.js/Node with C++/node_cpp/factorial/build/config.gypi" -I/home/sumeet/Apps/nodeJs/lib/node_modules/node-gyp/addon.gypi -I/home/sumeet/.node-gyp/8.9.4/include/node/common.gypi "--depth=." "-Goutput_dir=." "--generator-output=build" "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/sumeet/.node-gyp/8.9.4" "-Dnode_gyp_dir=/home/sumeet/Apps/nodeJs/lib/node_modules/node-gyp" "-Dnode_lib_file=/home/sumeet/.node-gyp/8.9.4/<(target_arch)/node.lib" "-Dmodule_root_dir=/media/sumeet/0E9A0C670E9A0C67/Projects/Node.js/Node with C++/node_cpp/factorial" "-Dnode_engine=v8" binding.gyp
+Makefile: $(srcdir)/../../../../../../../../home/sumeet/.node-gyp/8.9.4/include/node/common.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp $(srcdir)/../../../../../../../../home/sumeet/Apps/nodeJs/lib/node_modules/node-gyp/addon.gypi
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included

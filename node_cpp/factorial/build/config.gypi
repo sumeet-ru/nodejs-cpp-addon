@@ -24,6 +24,7 @@
     "icu_path": "deps/icu-small",
     "icu_small": "true",
     "icu_ver_major": "59",
+    "llvm_version": 0,
     "node_byteorder": "little",
     "node_enable_d8": "false",
     "node_enable_v8_vtunejit": "false",
@@ -36,6 +37,7 @@
     "node_shared_cares": "false",
     "node_shared_http_parser": "false",
     "node_shared_libuv": "false",
+    "node_shared_nghttp2": "false",
     "node_shared_openssl": "false",
     "node_shared_zlib": "false",
     "node_tag": "",
@@ -63,7 +65,7 @@
     "v8_trace_maps": 0,
     "v8_use_snapshot": "true",
     "want_separate_host_toolset": 0,
-    "nodedir": "/home/sumeet/.node-gyp/8.9.1",
+    "nodedir": "/home/sumeet/.node-gyp/8.9.4",
     "standalone_static_library": 1
   }
 }
